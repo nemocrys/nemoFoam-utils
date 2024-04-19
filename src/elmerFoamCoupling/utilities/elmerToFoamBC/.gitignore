@@ -1,0 +1,53 @@
+# cases
+.gz
+log.*
+log*
+postProcessing
+*~
+processor*
+[0-9]*
+[0-9]*.[0-9]*
+!0.org
+constant/extendedFeatureEdgeMesh
+*.eMesh
+constant/polyMesh/*
+!constant/polyMesh/blockMeshDict
+constant/cellToRegion
+*.OpenFOAM
+
+# lnInclude
+lnInclude
+linux64GccDPInt32Opt
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app

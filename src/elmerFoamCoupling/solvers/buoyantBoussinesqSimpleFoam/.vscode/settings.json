@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.H": "objective-cpp",
+        "buoyantBoussinesqSimpleFoam.C": "cpp"
+    }
+}

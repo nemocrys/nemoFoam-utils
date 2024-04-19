@@ -1,0 +1,102 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2212                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "600/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    probes
+    {
+        scalar
+        {
+            average(T)      1685.326695443091;
+            min(T)          1685.162427817195;
+            max(T)          1685.490963068987;
+        }
+        label
+        {
+            size(T)         2;
+            size(U)         2;
+        }
+        vector
+        {
+            average(U)      ( 0.0048504192 -0.00022447812 0.0021201848 );
+            min(U)          ( 0.0017363454 -0.0067339659 0.0015431251 );
+            max(U)          ( 0.007964493099999999 0.0062850096 0.0026972446 );
+        }
+    }
+    fieldMinMax
+    {
+        scalar
+        {
+            min(mag(U))     0;
+            max(mag(U))     0.1166860831694624;
+            min(T)          1684.31563477866;
+            max(T)          1687.778191041975;
+        }
+        label
+        {
+            min(mag(U))_cell 3900;
+            min(mag(U))_processor 0;
+            max(mag(U))_cell 111159;
+            max(mag(U))_processor 0;
+            min(T)_cell     94999;
+            min(T)_processor 0;
+            max(T)_cell     63399;
+            max(T)_processor 0;
+        }
+        vector
+        {
+            min(mag(U))_position ( 0.01125 0.1 0 );
+            max(mag(U))_position ( 0.096332655 0.1 0.023127424 );
+            min(T)_position ( -0.075333393 0.1 0.06434079600000001 );
+            max(T)_position ( -0.06434079600000001 0 -0.075333393 );
+        }
+    }
+}
+
+fieldAverage1
+{
+    U
+    {
+        totalIter       3094;
+        totalTime       600;
+        windowTimes     0 ( );
+        windowFieldNames 0 ( );
+    }
+    T
+    {
+        totalIter       3094;
+        totalTime       600;
+        windowTimes     0 ( );
+        windowFieldNames 0 ( );
+    }
+}
+
+freeSurf
+{
+    T
+    {
+        file            "<case>/postProcessing/freeSurf/600/T_patchSample.raw";
+    }
+    grad(T)
+    {
+        file            "<case>/postProcessing/freeSurf/600/grad(T)_patchSample.raw";
+    }
+}
+
+
+// ************************************************************************* //

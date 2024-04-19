@@ -1,0 +1,3 @@
+[submodule "src/elmerFoamCoupling/utilities/elmerToFoamBC"]
+	path = src/elmerFoamCoupling/utilities/elmerToFoamBC
+	url = https://github.com/nemocrys/elmerToFoamBC

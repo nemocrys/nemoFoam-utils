@@ -1,0 +1,85 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      changeDictionaryDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+boundary
+{
+    "(side|bottom|freeSurf)"
+    {
+        type            wall;
+    }
+}
+T
+{
+    internalField   uniform 1685;
+
+    boundaryField
+    {
+        
+        freeSurf
+        {
+            type            fixedGradient;
+            gradient         uniform 0; // will be replaced by elmerToFoamBC
+        }
+
+        bottom
+        {
+            type            fixedGradient;
+            gradient        uniform 60; 
+        }
+
+        side
+        {
+            type            fixedGradient;
+            gradient           uniform 50; // will be replaced by elmerToFoamBC
+        }        
+        crysSurf
+        {
+            type            fixedValue;
+            value           uniform 1685; // will be replaced by elmerToFoamBC
+        }
+    }
+}
+
+U
+{
+    internalField   uniform (0 0 0);
+
+    boundaryField
+    {
+        freeSurf
+        {
+            type            shearStressMarangoni;
+            gradTName       gradT;
+            MAcoef          -1.321;  // = -7.4e-4 / 0.00056 = (dgamma / dT) / mu = Marangoni coefficient / dynamic viscosity; 
+        }
+
+        side
+        {
+            type            noSlip;
+        }
+        
+        bottom
+        {
+            type            noSlip;
+        }
+        crysSurf
+        {
+            type            noSlip;
+        }
+    }
+}
+
+
+// ************************************************************************* //
