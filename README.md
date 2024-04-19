@@ -26,11 +26,11 @@ The Lorentz force and Joule heat are added as momentum and heat sources in the `
 *  `scr/elmerFoamCoupling/utilities/azimuthalAverage`  
 
     See `tutorials/azimuthalAverage` for an example setup. Utility to calculate the azimuthal average of the velocity on an axisymetric 3D mesh. The resulting velocity is mapped on a 2D wedge mesh and can be imported into Elmer. Both meshes should be available in the same case. 
-    Given a 3D vector field in Cartesian coordinates $U_{3D} = (U_x, U_y, U_z)$, its projection onto the cylindrical coordinate system in the $x-y$ plane $U_{3D}^{proj} = (U_{r}, U_{\theta}, U_{z})$, can be computed as follows:
+    Given a 3D vector field in Cartesian coordinates $U_{3D} = (U_x, U_y, U_z)$, its projection onto the cylindrical coordinate system in the $x-y$ plane $U_{3D}^{proj} = (U_{r}, U_{z}, U_{\theta})$, is computed as follows:
    
     $$U_r = \frac{U_x p_x + U_z p_z}{p_r}\   $$
-    $$U_{\theta} = U_y\ $$
-    $$U_z = 0 $$
+    $$U_z = U_y $$
+    $$U_{\theta} = 0\ $$
    
     Where:
     - $U_x, U_y, U_z$ are the components of the 3D velocity field in Cartesian coordinates.
