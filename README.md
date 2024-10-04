@@ -1,4 +1,4 @@
-# nemocrys-foam
+# nemoFoam-utils
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10996331.svg)](https://doi.org/10.5281/zenodo.10996331)
 
@@ -12,8 +12,6 @@ OpenFOAM applications, utilities and boundary conditions applied in the NEMOCRYS
 
    Maps boundary values from Elmer to an OpenFOAM mesh, including rotation to
 3D depending on options provided in elmerToFoamDict. See https://github.com/nemocrys/elmerToFoamBC for more information.
-
-
 
 * `scr/elmerFoamCoupling/solvers`  
 
@@ -47,9 +45,14 @@ $$\nabla \mathbf{U} \cdot \mathbf{n} = -\frac{1}{\mu}\frac{\partial\gamma}{\part
 To compile the solvers and boundary condition execute the `Allwmake`script. NOTE: The solvers and boundary conditions are configured to be put into the `FOAM_APPBIN` and `FOAM_LIBBIN`, respectively. This is required for seamless integration into [opencgs](https://github.com/nemocrys/opencgs).
 
 ## Referencing
-If you use this code in your research, please cite our article (available with open access):
 
-> Iason Tsiapkinis, Dadzis, K. (2024). nemocrys/nemoFoam-utils: Release of OpenFOAM applications, utilities and boundary conditions applied in the NEMOCRYS project. (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.10996331
+Several application examples with coupling between Elmer and OpenFOAM simulations:
+
+> [https://github.com/nemocrys/opencgs_examples]()
+
+Further details can be found in:
+
+> A. Wintzer, *Validation of multiphysical models for Czochralski crystal growth*. PhD thesis, Technische Universität Berlin, Berlin, 2024. [https://doi.org/10.14279/depositonce-20957](https://doi.org/10.14279/depositonce-20957)
 
 ## License
 
